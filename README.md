@@ -43,4 +43,7 @@ Unfortunately we cannot release the source code for emulator and
 assembler as this would not be fair for the future students of our course.
 However, if you are interested in our implementation choices, feel free
 to ask questions.
+
+All the files in this repository are released under
+Apache License 2.0
 ```
