@@ -1,0 +1,12 @@
+#ifndef MORSE_BASE_H
+#define MORSE_BASE_H
+
+#define MORSE_1UNITS "0x100000"
+#define MORSE_2UNITS "0x200000"
+#define MORSE_3UNITS "0x300000"
+#define MORSE_7UNITS "0x700000"
+
+#define MAX_LINE_LENGTH 512
+#define MAX_CODE_LENGTH 16
+
+#endif

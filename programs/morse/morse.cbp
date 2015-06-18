@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="morse" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="MorseEncoder">
+				<Option output="MorseEncoder" prefix_auto="1" extension_auto="1" />
+				<Option object_output="/homes/gj414/C_project/arm11_18/programs/morse/.objs" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<MakeCommands>
+					<Build command="make" />
+					<CompileFile command="make" />
+					<Clean command="make clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="make &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option output="test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="/homes/gj414/C_project/arm11_18/programs/morse/.objs" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<MakeCommands>
+					<Build command="make" />
+					<CompileFile command="make" />
+					<Clean command="make clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="make &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="MorseEncoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="morse_base.h" />
+		<Unit filename="morse_encoders.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="morse_encoders.h" />
+		<Unit filename="test.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

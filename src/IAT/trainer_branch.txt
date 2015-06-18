@@ -1,0 +1,138 @@
+mov r0,#1
+cmp r0,#0
+????????
+mov r1,#100
+b end
+target:
+mov r1,#200
+end:
+
+
+correct
+mov r0,#1
+cmp r0,#0
+bgt target
+mov r1,#100
+b end
+target:
+mov r1,#200
+end:
+
+incorrect
+mov r0,#1
+cmp r0,#0
+je target
+mov r1,#100
+b end
+target:
+mov r1,#200
+end:
+
+
+r1 = 200
+
+Welcome to Branching Level 1. You are given the following code:
+mov r0,#1
+cmp r0,#0
+????????
+mov r1,#100
+b end
+target:
+mov r1,#200
+end:
+andeq r0,r0,r0
+Your aim is to type in the missing line so that Register R1 contains value
+200.
+
+
+
+
+
+
+
+===================================================================
+===================================================================
+===================================================================
+===================================================================
+Welcome to Branching Level 2. Translate the following code into
+assembler:
+=======================
+while (r0 > 0)
+{
+    r0 = r0 - 1
+}
+=======================
+You are provided the following code:
+mov r0,#100
+=======================
+AIM: r0 = 0
+=======================
+You can ONLY Use the following:
+cmp r0,#0
+sub r0,r0,#1
+(label)
+ble (label)
+bgt (label)
+b (label)
+=======================
+
+
+
+solution:
+
+mov r0,#100
+
+while:
+cmp r0, #0
+ble endwhile
+sub r0,r0,#1
+b while
+endwhile:
+
+solution2:
+while:
+cmp r0,#0
+bgt inwhile
+b endwhile
+inwhile:
+sub r0,r0,#1
+b while
+endwhile:
+
+
+===================================================================
+===================================================================
+===================================================================
+===================================================================\n
+Welcome to Branchine Level 3. Translate the following code into\n
+assembler:\n
+==============\n
+for (int i = 0; i < 100; i++) {\n
+    r5 = r5 + 1;\n
+}\n
+==============\n
+AIM: r5 = 100\n
+==============\n
+You can use r0 to represent i. You may ONLY use the following:\n
+(label)\n
+blt (label)\n
+bge (label)\n
+bne (label)\n
+beq (label)\n
+b   (label)\n
+mov r0,#0\n
+cmp r0,#100\n
+add r0,r0,#1\n
+add r5,r5,#1\n
+==============\n
+
+mov r0,#0
+for:
+cmp r0,#100
+blt forin
+b forout
+forin:
+add r5,r5,#1
+add r0,r0,#1
+b for
+forout:

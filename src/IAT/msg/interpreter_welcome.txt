@@ -1,0 +1,14 @@
+===========================
+WELCOME
+to the
+ARM Interpreter
+
+You can type in assembler
+lines directly
+
+commands:
+regs      prints registers
+mem       prints memory
+show      prints assembler lines
+exit      quits the program
+===========================

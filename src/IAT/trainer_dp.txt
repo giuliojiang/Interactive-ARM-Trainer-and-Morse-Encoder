@@ -1,0 +1,102 @@
+; SWAP using mov!
+
+; Using only the mov command, swap the contents of two registers
+
+mov r0, #21
+mov r1, #26
+???????????		; swap the contents of register r0 and r1
+???????????
+???????????
+
+; exclusive-or allows us to do the classic swap between two numbers 
+; without the need for another variable
+
+--------------------------------------------------------------------------------
+
+; Integer swap.
+
+; Using only add, sub and/or rsb, swap two numbers without using a temporary 
+; variable
+
+mov r0, #12
+mov r1, #15
+????????????????	; swap the contents of r1 and r0 without using another
+????????????????	; register and only the add, sub and rsb commands
+????????????????
+
+--------------------------------------------------------------------------------
+
+; Swap the values of r0 and r1 using only the eor instruction
+
+mov r0, #41         ; r0 = 41
+mov r1, #62	    ; r1 = 62
+???????????	   
+???????????	    ; swap the contents of r1 and r0 using only eor
+???????????
+
+; this method does not use extra storage space through the use of a temp
+; variable and is also free from the danger of overflow that could be caused
+; due to the addition in the previous swap
+
+; GENIUS!
+
+--------------------------------------------------------------------------------
+
+; sub and rsb
+
+mov r0, #24
+mov r1, #51
+???????????		; using sub, do r2 = r1 - r0 
+
+--------------------------------------------------------------------------------
+
+mov r0, #24
+mov r1, #51
+???????????		; do the same as above using rsb
+
+--------------------------------------------------------------------------------
+; bitwise training
+
+; a key component of low level programming is bit manipulation.
+; this is done through the operators and, or and xor. 
+
+; Bit masks. Masks are binary data that are used to set, clear or check bits in
+; another binary number.
+
+; TASK: load any number into register r0. Select an appropiate mask and store 
+; in r1, the binary number formed by setting the 0th, 1st and 6th bit of 
+; the contents of r0.
+
+; for example : 
+
+; For,   dec 98  = bin 0110 0010
+; answer dec 227 = bin 1110 0011
+
+??????????????????	; load any value in r0
+??????????????????	; set the 0th, 1st and 6nd bit.
+
+--------------------------------------------------------------------------------
+
+; TASK: load any number into register r0. Select an appropriate mask and store
+; in r1, the binaryt number formed by clearing the 0th, 1st and 6th bit of 
+; the contents of r0
+
+; For,   dec 98 = bin 0110 0010 
+; answer dec 32 = bin 0010 0000
+
+?????????????????	; load any value in r1
+?????????????????	; clear the 0th, 1st and 6th bit.
+
+--------------------------------------------------------------------------------
+
+; tst to determine whether a number is all zero.
+
+tst r0, r0
+jz end
+mov r0, #21
+end: 
+
+; what is the value of r0 if line 3 is not executed.
+; LESSON: tst with the variable itself is a way to check if it is zero. 
+
+--------------------------------------------------------------------------------
